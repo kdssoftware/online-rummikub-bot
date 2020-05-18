@@ -7,18 +7,18 @@ getCoinsButtonYpos = 345
 getCoinsButtonColor = "0x8D6D58"
 okButtonXpos = 455
 okButtonYpos = 682
-waitTimeToLoadAds = 2000 #2seconds
+waitTimeToLoadAds = 10000 ;gives the ads 10 seconds to load before reload the game
 ^!f::
   MouseMove, getCoinsButtonXpos, getCoinsButtonYpos
   Click
   runAds = 1
   while(runAds = 1){
-    MouseMove, watchButtonXpos, watchButtonYpos #mouse to watch
+    MouseMove, watchButtonXpos, watchButtonYpos ;mouse to watch
     Click
     adIsShowing = 1
     Sleep, waitTimeToLoadAds
     while(adIsShowing = 1)  {
-      MouseMove, claimButtonXpos, claimButtonYpos #mouse over claim reward
+      MouseMove, claimButtonXpos, claimButtonYpos ;mouse over claim reward
       PixelGetColor, color, claimButtonXpos, claimButtonYpos
       if (color = "0x1CA069"){
         adIsShowing = 0
@@ -31,7 +31,7 @@ waitTimeToLoadAds = 2000 #2seconds
       }
       while(waitForReloadSite = 1){
         PixelGetColor, colorGetCoins, getCoinsButtonXpos, getCoinsButtonXpos
-        if(colorGetCoins = "0x8D6D58"){
+        if(colorGetCoins = getCoinsButtonColor){
           waitForReloadSite = 0
           adIsShowing = 0
           MouseMove, getCoinsButtonXpos, getCoinsButtonYpos
@@ -40,14 +40,14 @@ waitTimeToLoadAds = 2000 #2seconds
         }
       }
     }
-    MouseMove, claimButtonXpos, claimButtonYpos #mouse over claim reward
+    MouseMove, claimButtonXpos, claimButtonYpos ;mouse over claim reward
     Click
-    Sleep, 1000
-    MouseMove, okButtonXpos, okButtonYpos #mouse to ok
+    Sleep, 900
+    MouseMove, okButtonXpos, okButtonYpos ;mouse to ok
     Click
-    Sleep, 500
-    MouseMove, watchButtonXpos, watchButtonYpos #mouse to watch
-    Sleep, 1000
+    ;Sleep, 500
+    MouseMove, watchButtonXpos, watchButtonYpos ;mouse to watch
+    ;Sleep, 500
   }
 return
 ^!e::
