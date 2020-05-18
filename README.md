@@ -1,17 +1,16 @@
 Online-rummikub-bot
 --
 
-Download AutoHotKey and run the rummy.ahk file (while on the main menu screen).
-
+Download AutoHotKey and run the rummy.ahk use the [Rummikub online](https://rummikub-apps.com/?cb=37) website. Bluestacks doesnt work with this script.
 
 Shortcuts:
 -
 
-Ctrl+Alt+f: start watching ads
+`Ctrl+Alt+f` : start watching ads
 
-Ctrl+Alt+e: get color and postion of the mouse
+`Ctrl+Alt+e` : get color and postion of the mouse
 
-Ctrl+Alt+x: exit
+`Ctrl+Alt+x` : exit
 
 Set up
 -
@@ -40,4 +39,15 @@ These are the variables you need to fill in:
 
 `okButtonYpos` = ok button (after claiming the rewards), x position
 
-`waitTimeToLoadAds` (no need to change this, only if your internet is bad make it longer). this is amount of ms that waits to load the ad
+`waitTimeToLoadAds` (no need to change this, only if your internet is bad make it longer). this is amount of ms that waits to load the ad.
+
+Exploit
+-
+
+#### How not to lose any coins: 
+
+While playing on rummikub, keep a running idle session of rummikub open (best use the browser version).
+
+When you lost money on your playing session: watch and ad on the idle session afterwards restart the app (playing session).
+
+Dont do this when you gained money.
