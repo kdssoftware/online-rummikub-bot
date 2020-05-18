@@ -1,7 +1,7 @@
 Online-rummikub-bot
 --
 
-Download AutoHotKey and run the rummy.ahk file.
+Download AutoHotKey and run the rummy.ahk file (while on the main menu screen).
 
 
 Shortcuts:
